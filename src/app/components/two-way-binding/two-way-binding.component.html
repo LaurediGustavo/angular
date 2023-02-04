@@ -1,0 +1,20 @@
+<h2>two-way-binding works!</h2>
+
+<form>
+    <input type="text" [(ngModel)]="animal.name" name="name" placeholder="Informe o Nome do seu Pet" /><br />
+    <input type="text" [(ngModel)]="animal.type" name="type" placeholder="Informe o Tipo" /><br />
+    <input type="number" [(ngModel)]="animal.age" name="age" placeholder="Informe a Idade" /><br />
+    <br />
+    <input type="button" value="Validar" (click)="validarDados()" />
+    <input type="button" value="Limpar" (click)="limpar()" />
+</form>
+
+<p *ngIf="!retorno; else validado">
+    Dados Incorretos!
+</p>
+<ng-template #validado>
+    <p>Nome: {{ animal.name }}</p>
+    <p>Tipo: {{ animal.type }}</p>
+    <p>Idade: {{ animal.age }}</p>
+</ng-template>
+

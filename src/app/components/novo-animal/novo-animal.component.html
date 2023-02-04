@@ -1,0 +1,15 @@
+<p>Cadastro de Animal</p>
+<br />
+<label>Id: </label>
+<input type="number" name="id" [(ngModel)]="animal.id" placeholder="Id do Animal" />
+<br />
+<label>Name: </label>
+<input type="text" name="name" [(ngModel)]="animal.name" placeholder="Name do Animal" />
+<br />
+<label>Type: </label>
+<input type="text" name="type" [(ngModel)]="animal.type" placeholder="Type do Animal" />
+<br />
+<label>Age: </label>
+<input type="number" name="age" [(ngModel)]="animal.age" placeholder="Age do Animal" />
+<br />
+<button (click)="gravar()" >Gravar</button>
